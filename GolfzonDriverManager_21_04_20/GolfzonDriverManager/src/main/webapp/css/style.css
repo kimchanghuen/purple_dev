@@ -1,0 +1,191 @@
+
+  @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800');
+
+   button {
+	margin:3px;
+	color:#333333;
+	border:1px solid #aaaaaa;
+	border-radius:3px;
+	box-shadow: 1px 1px #888888;
+	cursor:pointer;
+   }
+   
+   #dataField{
+     max-height : 600px;
+     overflow: auto;
+   }
+      
+  #titleList{
+    border:none;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+    margin: auto;
+  }
+
+  th {
+	border:none;
+	border-right:1px solid #0d57b1;
+    border-bottom: 2px solid #0d2791;
+    text-align: center;
+  }
+    
+  td {
+	border:none;
+	border-right:1px solid #cccccc;
+    border-bottom: 1px solid #aaaaaa;
+    text-align: center;
+  }
+  
+  thead tr {
+    background-color: #0d47a1;
+	font-size: 14px;
+    font-weight: bold;
+    height: 24px;
+    color: #ffffff;
+  } 
+  tbody tr:nth-child(2n) {
+   background-color: #FFFFFF;
+  }
+  tbody tr:nth-child(2n+1) {
+    background-color: #EFEFEF;
+  }  
+  
+  body {
+  font-family: 'NanumGothic', 'serif';
+  font-size:13px;
+  background-color:#EFEFEF;
+  text-align: -webkit-center;
+  }
+  
+  /* ------------------------------- 상위메뉴 관련 -------------------------------- */
+  #topMenu {
+            height: 20px;  
+            width: 1070px;       /* [변경] 하위 메뉴와 동일하게 맞춤 */
+            position: relative;
+            background-color: #2D2D2D; /* [추가] 늘어난만큼 배경색도 보이도록 수정 */
+    }
+    #topMenu ul {/* 메인 메뉴 안의 ul을 설정함: 상위메뉴의 ul+하위 메뉴의 ul */
+        list-style-type: none;  
+        margin: 0px;            
+        padding: 0px; 
+    }
+    #topMenu ul li {            /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
+        color: white;               
+        background-color: transparent; /* 투명색 */  
+        float: left;                
+        line-height: 28px;         
+        vertical-align: top;
+        text-align: center;         
+        -position: relative;         
+    }
+
+    .menuLink, .submenuLink {           /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
+        text-decoration:none;               
+        display: block;
+        width: 150px;                       
+        font-size: 12px;                    
+        font-weight: bold;                  
+        font-family: 'NanumGothic', 'serif';
+    }
+    .menuLink {     /* 상위 메뉴의 글씨색을 흰색으로 설정 */
+        color: white;
+		font-size:12px;
+		height: 30px;
+    	line-height: 28px;  
+    }
+    .topMenuLi:hover .menuLink {    /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
+        color: red;             
+        background-color: #4d4d4d;
+    }
+    .longLink { 
+        width: 140px;   
+        height: 25px;
+        -margin-top: 5px;
+        padding: 3px;
+    }
+    .submenuLink {          /* 하위 메뉴의 a 태그 스타일 설정 */
+        color: #2d2d2d;             
+        background-color: #dddddd; 
+    }
+    .submenu {  /* 하위 메뉴 스타일 설정 */
+        position: absolute;     
+        height: 0px;
+        overflow: hidden;       
+        transition: height .2s; 
+        -webkit-transition: height .2s; 
+        -moz-transition: height .2s; 
+        -o-transition: height .2s; 
+        width: 1070px;           
+        left: 0;
+        background-color: transparent; /* [추가] 하위 메뉴 전체에 배경색 설정 */
+    }
+    
+    .head_logo_arrow { /* 하위메뉴 상단 화살표 */
+	    position: initial;
+	    left: 10%;
+	    margin-left: -333px;
+	    margin-top: 17px;
+	    width: 2px;
+	    height: 2px;
+	    border-bottom: 8px solid #dddddd;
+	    border-right: 8px solid transparent;
+	    border-left: 8px solid transparent;
+	    z-index: 10;
+	}
+	
+   .submenu1 {  /* 코드관리 - 분류 */
+        position: absolute;     
+        height: 0px;            
+        -overflow: hidden;       
+        transition: height .2s; 
+        -webkit-transition: height .2s; 
+        -moz-transition: height .2s; 
+        -o-transition: height .2s; 
+        width: 770px;           
+        left: 0;
+        background-color: #efefef; /* [추가] 하위 메뉴 전체에 배경색 설정 */
+    }
+    
+    .submenu li {
+        display: inline-block;
+        -padding-bottom: 20px;
+        -padding-top: 20px;
+    }
+    .topMenuLi:hover .submenu { 
+        height: 35px;
+    }
+    .submenuLink:hover {        
+        color: red;
+        background-color: #dddddd;  
+    }
+    
+    
+    /* 각 페이지 삽입/수정 테이블 css */
+    
+    .EditPageTable{
+    	background-color:#ededed;
+    	border:none;
+    	text-align: left;
+    }
+    
+     .wrap-loading{ /*화면 전체를 어둡게 합니다.*/
+	    position: fixed;
+	    left:0;
+	    right:0;
+	    top:0;
+	    bottom:0;
+	    background: rgba(0,0,0,0.2); /*not in ie */
+	    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#20000000', endColorstr='#20000000');    /* ie */
+	}
+
+    .wrap-loading div{ /*로딩 이미지*/
+        position: fixed;
+        top:50%;
+        left:50%;
+        margin-left: -21px;
+        margin-top: -21px;
+    }
+    .display-none{ /*감추기*/
+        display:none;
+    }
+[]
